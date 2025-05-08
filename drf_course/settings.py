@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-3ai-p7*@h0g9%7ynfklyxwf@k6cq=eu2ma24bpzhvp=sdwdf9t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost",
+    "127.0.0.1",
+    "api-bal4.onrender.com",]
 
 
 # Application definition
