@@ -1,0 +1,62 @@
+GET http://127.0.0.1:8000/products/  HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/products/2/ HTTP/1.1
+
+###
+DELETE http://127.0.0.1:8000/products/2/ HTTP/1.1
+
+###
+PUT http://127.0.0.1:8000/products/2/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDk2MDcyLCJpYXQiOjE3NDY0OTU3NzIsImp0aSI6Ijg1YjQ2Zjk4YjllNzQ0YTRhNTQ2YWIzMDA2MTQyY2YyIiwidXNlcl9pZCI6MX0.iUtmlBv4PO9BrNcJdcZT1iBLos6ncq6WYKUyPYgwnQ0
+
+{
+    "name": "Washing Machine", 
+    "price":450.00, 
+    "stock":11, 
+    "description":"An amazing new Washing Machine" 
+    
+}
+
+
+###
+
+POST http://127.0.0.1:8000/products/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDk1MDczLCJpYXQiOjE3NDY0OTQ3NzMsImp0aSI6Ijg5NmU3NGJmYzFiOTQ5Yzc5ZmMzMjAzYzQ1YjE1ZGVmIiwidXNlcl9pZCI6MX0.StFsSuqQ8d5hJ0OTpH0f-hs2xpc8V4QkXo6dLxiSV1Q
+Content-Type: application/json
+
+{
+    "name": "Washing Machine", 
+    "price":450.00, 
+    "stock":11, 
+    "description":"An amazing new Washing Machine" 
+    
+}
+
+###
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "testing"
+}
+
+
+
+###
+GET  http://127.0.0.1:8000/user-orders/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDk1MjgwLCJpYXQiOjE3NDY0OTQ5ODAsImp0aSI6IjZiMGM0MGVkOWI4NTRhYmI4NmQyYjA0YTM3MjFmNDdkIiwidXNlcl9pZCI6MX0.LNC5glcC_mV_H2bFKwgGkeVHy0aRMPx-OtRPO2DS8F4
+Content-Type: application/json
+
+
+###
+POST http://127.0.0.1:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NjU0Mzk2NywiaWF0IjoxNzQ2NDU3NTY3LCJqdGkiOiI4MmZlNWYwZTIzNDg0MjQzYjgyM2Y4MzYxNTkwMWM2YiIsInVzZXJfaWQiOjF9.GeyID-AVMTK43xITzoMi2-QisnGBPJFAV_P9wNPOPQg"
+}
+
+
